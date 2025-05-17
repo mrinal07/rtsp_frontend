@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import StreamInput from './components/StreamInput';
+import StreamGrid from './components/StreamGrid';
 
 function App() {
+  const [streams, setStreams] = useState([]);
+
+  const addStream = (url) => {
+    // Prevent duplicates
+    if (streams.includes(url)) {
+      alert('Stream already added!');
+      return;
+    }
+    setStreams((prev) => [...prev, url]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ maxWidth: '900px', margin: 'auto', padding: '1rem' }}>
+
+      <h1 style={{ textAlign: 'center' }}>RTSP Stream Viewer</h1>
+      
+      <StreamInput onAddStream={addStream} />
+      {streams.length > 0 ? (
+        <StreamGrid streams={streams} />
+      ) : (
+        <p style={{ textAlign: 'center' }}>No streams added yet.</p>
+      )}
     </div>
   );
 }
