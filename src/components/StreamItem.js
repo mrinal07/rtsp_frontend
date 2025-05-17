@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 
 function StreamItem({ url }) {
-    
   const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef(null);
 
@@ -17,17 +16,7 @@ function StreamItem({ url }) {
   };
 
   return (
-    <div style={{
-      border: '1px solid #ccc',
-      borderRadius: '8px',
-      padding: '0.5rem',
-      margin: '0.5rem',
-      maxWidth: '400px',
-      flex: '1 1 300px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    }}>
+    <div className="stream-item">
       <video
         ref={videoRef}
         src={url}

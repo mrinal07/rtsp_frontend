@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 import StreamInput from './components/StreamInput';
 import StreamGrid from './components/StreamGrid';
 
@@ -15,10 +16,8 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: '900px', margin: 'auto', padding: '1rem' }}>
-
+    <div className="app-container">
       <h1 style={{ textAlign: 'center' }}>RTSP Stream Viewer</h1>
-      
       <StreamInput onAddStream={addStream} />
       {streams.length > 0 ? (
         <StreamGrid streams={streams} />

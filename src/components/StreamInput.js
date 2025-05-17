@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function StreamInput({ onAddStream }) {
-    
   const [url, setUrl] = useState('');
 
   const handleAdd = () => {
@@ -20,7 +19,7 @@ function StreamInput({ onAddStream }) {
   };
 
   return (
-    <div style={{ marginBottom: '1rem' }}>
+    <div className="input-wrapper">
       <input
         type="text"
         placeholder="Enter RTSP stream URL"

@@ -1,0 +1,80 @@
+/* styles.css */
+
+/* App Layout */
+.app-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Input Section */
+  .input-wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .input-wrapper input {
+    flex: 1 1 300px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    min-width: 200px;
+  }
+  
+  .input-wrapper button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  
+  /* Stream Grid */
+  .stream-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Stream Item */
+  .stream-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    flex: 1 1 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stream-item video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .stream-controls {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    word-break: break-all;    
+  }
+  /* Play/Pause Button Styling */
+.stream-controls button {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .stream-controls button:hover {
+    background-color: #0056b3;
+  }
